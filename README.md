@@ -7,7 +7,7 @@ Instructions here: https://github.com/wearefair/interview/tree/master/react
 ### Run it locally
 ```
 > git clone git@github.com:jamesalmeida/fair-code-challenge.git
-> cd Fair-interview-demo
+> cd fair-code-challenge
 > npm install
 > npm start
 ```

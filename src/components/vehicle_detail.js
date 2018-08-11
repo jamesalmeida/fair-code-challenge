@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchVehicle } from '../actions';
-import { Link } from 'react-router-dom';
 
 class VehicleDetail extends Component {
   componentDidMount() {
@@ -28,7 +27,6 @@ class VehicleDetail extends Component {
 
     return (
         <div className="list-group-item col-sm-12">
-          <Link className="button-main pull-xs-right" to="/">Back To Index</Link>
           <div className="post-body">
             <h3>{vehicle.model}</h3>
             <img className="vehicle-index-image" src={ vehicle.image_location_list[0]}></img>

@@ -23,22 +23,16 @@ class VehiclesIndex extends Component {
       }
 
       return (
-        <li className="list-group-item col-sm-12" key={vehicle.id}>
+        <li className="list-group-item col-sm-4" key={vehicle.id}>
           <Link to={`/vehicles/${vehicle.id}`}>
-            <div className="col-sm-4">
-              <img className="vehicle-index-image" src={ vehicle.exterior_color_info.fair_colored_image}></img>
-            </div>
-            <div  className="col-sm-8">
-              <h4>{ vehicle.model_year } { vehicle.make } { vehicle.model } { vehicle.trim } </h4>
-                <ul>
-                  <li>Body Style: { vehicle.body_style }</li>
-                  <li>Milage: { vehicle.mileage }</li>
-                  <li>Condition: { vehicle.new_used_flag }</li>
-                  <li>VIN: { vehicle.id }</li>
-                  <li>Montly Payment: { centsToDollars(vehicle.product_financials[0].monthly_payment_cents) }</li>
-                  <li>Start Fee: { centsToDollars(vehicle.product_financials[0].start_fee_cents) }</li>
-                  <li>Finance ID: { vehicle.product_financials[0].id }</li>
-                </ul>
+            <div className="col-sm-12 card">
+              <img className="vehicle-index img" src={ vehicle.exterior_color_info.fair_colored_image}></img>
+              <span className="vehicle-text model-year">{ vehicle.model_year } { vehicle.make } </span>
+              <span className="vehicle-text model">{ vehicle.model } { vehicle.trim }</span>
+              <span className="vehicle-text as-low-as">As low as</span>
+              <span className="vehicle-text monthly-cost">{ centsToDollars(vehicle.product_financials[0].monthly_payment_cents) }</span>
+              <span className="vehicle-text per-month">Per Mo. </span>
+              <span className="vehicle-text milage">Milage: { vehicle.mileage }</span>
             </div>
           </Link>
         </li>
@@ -51,7 +45,7 @@ class VehiclesIndex extends Component {
     console.log('this.props.vehicles = ');
     console.log(this.props.vehicles);
     return (
-      <div className="row align-items-start">
+      <div className="align-items-start">
         <ul className="list-group">
           { this.renderVehicleList() }
         </ul>

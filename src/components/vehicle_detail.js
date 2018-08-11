@@ -19,6 +19,13 @@ class VehicleDetail extends Component {
       return <div>Loading...</div>;
     }
 
+    function centsToDollars(cents) {
+      var dollars = cents / 100;
+      return (
+        dollars.toLocaleString("en-US", {style:"currency", currency:"USD"})
+      );
+    }
+
     return (
         <div className="list-group-item col-sm-12">
           <Link className="button-main pull-xs-right" to="/">Back To Index</Link>
@@ -31,8 +38,8 @@ class VehicleDetail extends Component {
               <li>Milage: { vehicle.mileage }</li>
               <li>Condition: { vehicle.new_used_flag }</li>
               <li>VIN: { vehicle.id }</li>
-              <li>Montly Payment: </li>
-              <li>Start Fee: </li>
+                <li>Montly Payment: { centsToDollars(vehicle.product_financials[0].monthly_payment_cents) }</li>
+                <li>Start Fee: { centsToDollars(vehicle.product_financials[0].start_fee_cents) }</li>
               <li>Finance ID: </li>
             </ul>
           </div>

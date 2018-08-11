@@ -20,9 +20,8 @@ class VehicleDetail extends Component {
     }
 
     return (
-        <div>
-          <Link className="btn btn-secondary" to="/">Back To Index</Link>
-          <button className="btn btn-danger pull-xs-right">Button</button>
+        <div className="list-group-item col-sm-12">
+          <Link className="button-main pull-xs-right" to="/">Back To Index</Link>
           <div className="post-body">
             <h3>{vehicle.model}</h3>
             <img className="vehicle-index-image" src={ vehicle.image_location_list[0]}></img>

@@ -1,3 +1,27 @@
+/* Fair color: #ff5a00 */
+
+.button-main {
+  background: #ff5a00;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  font-weight: 200;
+  font-size: 12px;
+  width: 120px;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.list-group-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
 .container {
   margin-top: 20px;
 }

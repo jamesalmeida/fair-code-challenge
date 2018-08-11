@@ -23,11 +23,13 @@ class VehiclesIndex extends Component {
       }
 
       return (
-        <li className="list-group-item" key={vehicle.id}>
+        <li className="list-group-item col-sm-12" key={vehicle.id}>
           <Link to={`/vehicles/${vehicle.id}`}>
-            <div>
-              <img className="vehicle-index-image" src={ vehicle.image_location_list[0]}></img>
-              <h3>{ vehicle.model_year } { vehicle.make } { vehicle.model } { vehicle.trim } </h3>
+            <div className="col-sm-4">
+              <img className="vehicle-index-image" src={ vehicle.exterior_color_info.fair_colored_image}></img>
+            </div>
+            <div  className="col-sm-8">
+              <h4>{ vehicle.model_year } { vehicle.make } { vehicle.model } { vehicle.trim } </h4>
                 <ul>
                   <li>Body Style: { vehicle.body_style }</li>
                   <li>Milage: { vehicle.mileage }</li>
@@ -49,8 +51,7 @@ class VehiclesIndex extends Component {
     console.log('this.props.vehicles = ');
     console.log(this.props.vehicles);
     return (
-      <div>
-        <h3>Cars</h3>
+      <div className="row align-items-start">
         <ul className="list-group">
           { this.renderVehicleList() }
         </ul>

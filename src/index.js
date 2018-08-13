@@ -17,11 +17,13 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <NavBar />
-        <Switch>
-          <Route path="/vehicles/:id" component={VehicleDetail} />
-          <Route path="/" component={VehiclesIndex} />
-        </Switch>
+        <div className="container-fluid">
+          <Switch>
+            <Route path="/vehicles/:id" component={VehicleDetail} />
+            <Route path="/" component={VehiclesIndex} />
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   </Provider>
-  , document.querySelector('.container'));
+  , document.querySelector('.app-container'));

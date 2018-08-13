@@ -3,6 +3,36 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* .card-group-item {
+  .list-style: none !important;
+} */
+
+.card {
+  display: inline-block !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.card:first-child {
+  margin-left: 0px;
+}
+
+.cards-wrapper {
+  text-align: center;
+}
+
+.container {
+  margin-top: 0px !important;
+}
+
+#fair-logo-text {
+  color: #ff5a00;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+
 .button-main {
   background: #ff5a00;
   color: #fff;
@@ -14,6 +44,7 @@
   display: block;
   text-align: center;
   transition: 0.2s;
+  margin-top: 7px;
 }
 .list-group-item {
   border: none !important;
@@ -98,4 +129,31 @@ img.vehicle-index {
   top: -10px;
   right: -0px;
   text-align: right;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

@@ -1,0 +1,150 @@
+/* Fair color: #ff5a00 */
+a {
+  text-decoration: none !important;
+}
+
+.body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.button-main {
+  background: #ff5a00;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  font-weight: 200;
+  font-size: 12px;
+  width: 120px;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+  margin-top: 7px;
+}
+
+.card {
+  background: #f6f6f6 !important;
+  border-radius: 9px;
+  cursor: pointer;
+  display: inline-block !important;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.3s;
+
+  .as-low-as {
+    top:-170px;
+    right:-2px;
+    text-align: right;
+  }
+
+  img.vehicle-index {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 40px;
+  }
+
+  .monthly-cost {
+    top:-173px;
+    right:-4px;
+    text-align: right;
+    color: #ff5c06;
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .per-month{
+    top:-175px;
+    right:-5px;
+    text-align: right;
+  }
+
+  .vehicle-text {
+    display: block;
+    position: relative;
+    font-size: 13px;
+    color: #000;
+  }
+
+  .vehicle-text.milage {
+    top: -10px;
+    right: -0px;
+    text-align: right;
+  }
+
+  .vehicle-text.model {
+    top: -140px;
+    left: -0px;
+  }
+
+  .vehicle-text.model-year {
+    top: -140px;
+    left: -0px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 13px 19px -2.5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.cards-wrapper {
+  text-align: center;
+}
+
+.container-fluid {
+  margin-bottom: 20px;
+}
+
+nav {
+  #fair-logo-text {
+    color: #ff5a00;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 47%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 31.3%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -29,42 +29,45 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   transition: 0.3s; }
-  .card .as-low-as {
-    top: -170px;
-    right: -2px;
-    text-align: right; }
   .card img.vehicle-index {
-    max-width: 200px;
+    max-width: 100%;
     margin: 0 auto;
     display: block;
-    position: relative;
-    top: 40px; }
-  .card .monthly-cost {
-    top: -173px;
-    right: -4px;
-    text-align: right;
-    color: #ff5c06;
-    font-size: 25px;
-    font-weight: 400; }
-  .card .per-month {
-    top: -175px;
-    right: -5px;
-    text-align: right; }
+    position: relative; }
   .card .vehicle-text {
     display: block;
     position: relative;
     font-size: 13px;
     color: #000; }
-  .card .vehicle-text.milage {
-    top: -10px;
-    right: -0px;
-    text-align: right; }
-  .card .vehicle-text.model {
-    top: -140px;
-    left: -0px; }
-  .card .vehicle-text.model-year {
-    top: -140px;
-    left: -0px; }
+    .card .vehicle-text.as-low-as {
+      top: -42px;
+      right: -1px;
+      text-align: right; }
+    .card .vehicle-text.monthly-cost {
+      top: -44px;
+      right: -3px;
+      text-align: right;
+      color: #ff5c06;
+      font-size: 25px;
+      font-weight: 500; }
+    .card .vehicle-text.per-month {
+      top: -44px;
+      right: -3px;
+      text-align: right; }
+    .card .vehicle-text.model-subtitle {
+      top: -3px;
+      left: -4px; }
+    .card .vehicle-text.start-fee {
+      bottom: 17px;
+      right: 20px;
+      text-align: right;
+      background-color: #f6f6f6;
+      position: absolute;
+      padding-top: 10px; }
+    .card .vehicle-text.title {
+      font-size: 20px;
+      top: -5px;
+      left: -4px; }
 
 .card:hover {
   box-shadow: 0 13px 19px -2.5px rgba(0, 0, 0, 0.3);
@@ -80,6 +83,11 @@ nav #fair-logo-text {
   color: #ff5a00;
   font-size: 30px;
   font-weight: bold; }
+
+.vehicle-card {
+  width: 100% !important; }
+  .vehicle-card img {
+    max-width: 250px; }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

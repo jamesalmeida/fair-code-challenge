@@ -26,22 +26,42 @@ class VehicleDetail extends Component {
     }
 
     return (
-        <div className="list-group-item col-sm-12">
-          <div className="post-body">
-            <h3>{vehicle.model}</h3>
-            <img className="vehicle-index-image" src={ vehicle.image_location_list[0]}></img>
-            <h6>{ vehicle.model_year } { vehicle.make } { vehicle.model } { vehicle.trim } </h6>
-            <ul>
-              <li>Body Style: { vehicle.body_style }</li>
-              <li>Milage: { vehicle.mileage }</li>
-              <li>Condition: { vehicle.new_used_flag }</li>
-              <li>VIN: { vehicle.id }</li>
-                <li>Montly Payment: { centsToDollars(vehicle.product_financials[0].monthly_payment_cents) }</li>
-                <li>Start Fee: { centsToDollars(vehicle.product_financials[0].start_fee_cents) }</li>
-              <li>Finance ID: </li>
-            </ul>
-          </div>
+      <div className="card vehicle-card card-inverse">
+        <img className="img card-img-top" alt="Card image" src={ vehicle.image_location_list[0]}></img>
+        <div className="card-img-overlay">
+          <h4 className="card-title">
+            { vehicle.model_year } { vehicle.make }
+          </h4>
+          <h6 className="card-subtitle mb-2 text-muted">
+             { vehicle.model } { vehicle.trim }
+          </h6>
         </div>
+        <div className="card-info card-block">
+          <ul>
+            <li>
+              Body Style: { vehicle.body_style }
+            </li>
+            <li>
+              Milage: { vehicle.mileage }
+            </li>
+            <li>
+              Condition: { vehicle.new_used_flag }
+            </li>
+            <li>
+              Montly Payment: { centsToDollars(vehicle.product_financials[0].monthly_payment_cents) }
+            </li>
+            <li>
+              Start Fee: { centsToDollars(vehicle.product_financials[0].start_fee_cents) }
+            </li>
+          </ul>
+          <p className="card-text">
+            <small className="text-muted">
+              VIN: { vehicle.id }
+            </small>
+          </p>
+          <a href="#" className="btn btn-primary">Favorite</a>
+        </div>
+      </div>
     );
   }
 }

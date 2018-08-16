@@ -1,0 +1,32 @@
+@import '_config.scss';
+
+@mixin wrapper($max-width: $max-width) {
+  width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 $spacer;
+}
+
+@function rem($pixels) {
+  @return #{$pixels / $font-size-root}rem;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin medium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

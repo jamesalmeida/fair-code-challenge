@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchVehicle } from '../actions';
+import { centsToDollars } from '../utils/utility_functions';
+import Carousel from 'nuka-carousel';
 
 class VehicleDetail extends Component {
   componentDidMount() {
@@ -15,28 +17,52 @@ class VehicleDetail extends Component {
     console.log(vehicle);
 
     if (!vehicle) {
-      return <div>Loading...</div>;
+      console.log('Still loading...');
+      return <div className="loading-div">Loading...</div>;
     }
 
-    function centsToDollars(cents) {
-      var dollars = cents / 100;
-      return (
-        dollars.toLocaleString("en-US", {style:"currency", currency:"USD"})
-      );
+    $(function() {
+      $(".favorites-heart").on("click", function() {
+        $(this).toggleClass("is-active");
+      });
+    });
+
+    let handleLoadImage = () => {
+      this.carousel.setDimensions()
     }
 
     return (
-      <div className="card vehicle-card card-inverse">
-        <img className="img card-img-top" alt="Card image" src={ vehicle.image_location_list[0]}></img>
-        <div className="card-img-overlay">
-          <h4 className="card-title">
-            { vehicle.model_year } { vehicle.make }
-          </h4>
-          <h6 className="card-subtitle mb-2 text-muted">
-             { vehicle.model } { vehicle.trim }
-          </h6>
+      <div className="vehicle-wrapper grid">
+        <div className="grid-box-title">
+          <div className="title-sub-fave">
+            <h4 className="card-title">
+              { vehicle.model_year } { vehicle.make }
+            </h4>
+            <h6 className="card-subtitle mb-2 text-muted">
+               { vehicle.model } { vehicle.trim }
+            </h6>
+            <div className="favorites-heart-stage">
+              <div className="favorites-heart"></div>
+            </div>
+          </div>
         </div>
-        <div className="card-info card-block">
+        <div className="grid-box-carousel">
+          {/* Carousel options aren't working perfectly. Wanted false for renderBottomControls but throws a weird console error when I used boolean. Also needed to kind fof hack the display height because it would load before the images and be set to 0 until you resized the window. Using onLoad to reset the dimensions. */}
+          <Carousel
+            wrapAround={true}
+            renderBottomCenterControls={() => {}}
+            ref={c => this.carousel = c} >
+            { vehicle.image_location_list.map(image =>
+              <img
+                key={vehicle.id}
+                className="img"
+                alt="Car image"
+                src={image}
+                onLoad={handleLoadImage} />
+            )}
+          </Carousel>
+        </div>
+        <div className="car-info grid-box-car-info">
           <ul>
             <li>
               Body Style: { vehicle.body_style }
@@ -59,7 +85,6 @@ class VehicleDetail extends Component {
               VIN: { vehicle.id }
             </small>
           </p>
-          <a href="#" className="btn btn-primary">Favorite</a>
         </div>
       </div>
     );

@@ -1,0 +1,21 @@
+nav {
+  #fair-logo-text {
+    color: #ff5a00;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.button-main {
+  background: $color-brand;
+  color: #fff;
+  padding: 5px;
+  border-radius: 50px;
+  font-weight: 200;
+  font-size: 12px;
+  width: 120px;
+  display: block;
+  text-align: center;
+  transition: 0.2s;
+  margin-top: 7px;
+}

@@ -1,23 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-// class NavBar extends Component {
-//   render() {
-//     return (
-//       <nav className="navbar sticky-top navbar-light bg-light">
-//         <div className="">
-//           <Link to={'/'} className="navbar-brand">fair</Link>
-//           <ul className="navbar-nav mr-auto">
-//             <li className="nav-item"><Link to={'/'} className="nav-link"> Home </Link></li>
-//             <li className="nav-item"><Link to={'/about'} className="nav-link">About</Link></li>
-//             <li className="nav-item"><Link className="button-main" to="/">Button</Link></li>
-//           </ul>
-//         </div>
-//       </nav>
-//     );
-//   }
-// }
-
 class NavBar extends Component {
   render() {
     return (

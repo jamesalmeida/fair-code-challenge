@@ -1,0 +1,64 @@
+@import '_config.scss';
+@import '_mixins.scss';
+@import 'favorites.scss';
+@import 'navigation.scss';
+@import 'carousel.scss';
+@import 'vehicle-detail.scss';
+@import 'vehicle-index.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 100%;
+  font-family: $font-family;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-size: $font-size-base;
+  font-family: $font-family;
+  font-weight: 400;
+  text-align: left;
+  background-color: $body-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container-fluid {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+}
+
+.loading-div {
+  text-align: center;
+  width:100%;
+  margin:40px auto;
+}

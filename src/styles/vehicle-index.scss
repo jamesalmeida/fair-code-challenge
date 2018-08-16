@@ -1,36 +1,13 @@
-/* Fair color: #ff5a00 */
-a {
-  text-decoration: none !important;
-}
-
-.body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.button-main {
-  background: #ff5a00;
-  color: #fff;
-  padding: 5px;
-  border-radius: 50px;
-  font-weight: 200;
-  font-size: 12px;
-  width: 120px;
-  display: block;
-  text-align: center;
-  transition: 0.2s;
-  margin-top: 7px;
-}
-
 .card {
   background: #f6f6f6 !important;
   border-radius: 9px;
   cursor: pointer;
   display: inline-block !important;
   line-height: 1.1;
-  margin-top: 20px;
-  margin-bottom: 0px;
-  margin-left: 10px;
-  margin-right: 10px;
+  // margin-top: 20px;
+  // margin-bottom: 0px;
+  // margin-left: 10px;
+  // margin-right: 10px;
   transition: 0.3s;
 
   img.vehicle-index {
@@ -38,7 +15,7 @@ a {
     margin: 0 auto;
     display: block;
     position: relative;
-    // top: 40px;
+    top: 11px;
   }
 
   .vehicle-text {
@@ -88,7 +65,6 @@ a {
       left: -4px;
     }
   }
-
 }
 
 .card:hover {
@@ -100,63 +76,44 @@ a {
   text-align: center;
 }
 
-.container-fluid {
-  margin-bottom: 20px;
+.vehicle-index-wrapper-grid {
+  display: grid;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap:1em;
+  margin-top: 20px;
 }
-
-nav {
-  #fair-logo-text {
-    color: #ff5a00;
-    font-size: 30px;
-    font-weight: bold;
-  }
-}
-
-.vehicle-card {
-  width: 100% !important;
-  img {
-    max-width: 250px;
-  }
-}
-
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .card {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+  .vehicle-index-wrapper-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .card {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+  .vehicle-index-wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .card {
-    width: 47%;
-    margin-left: 10px;
-    margin-right: 10px;
+  .vehicle-index-wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .card {
-    width: 31.3%;
-    margin-left: 10px;
-    margin-right: 10px;
+  .vehicle-index-wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+  .vehicle-index-wrapper-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

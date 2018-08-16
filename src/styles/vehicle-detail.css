@@ -1,0 +1,74 @@
+.vehicle-wrapper {
+  grid-auto-columns: minmax(100px, auto);
+  grid-gap: 1em;
+  margin-top: 20px; }
+  .vehicle-wrapper .title-sub-fave {
+    position: relative;
+    top: 0px;
+    z-index: 999;
+    margin-bottom: 20px; }
+  .vehicle-wrapper .favorites-heart-stage {
+    position: absolute;
+    top: 14px;
+    left: 157px;
+    transform: translate(-50%, -50%); }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .vehicle-wrapper .grid-box-title {
+    grid-column: 1;
+    grid-row: 1; }
+  .vehicle-wrapper .grid-box-carousel {
+    grid-column: 1;
+    grid-row: 2; }
+  .vehicle-wrapper .grid-box-car-info {
+    grid-column: 1;
+    grid-row: 3; }
+  .car-info {
+    margin-top: 20px; } }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .vehicle-wrapper {
+    grid-template-columns: 1fr; }
+    .vehicle-wrapper .grid-box-title {
+      grid-column: 1;
+      grid-row: 1; }
+    .vehicle-wrapper .grid-box-carousel {
+      grid-column: 1;
+      grid-row: 2; }
+    .vehicle-wrapper .grid-box-car-info {
+      grid-column: 1;
+      grid-row: 3; }
+  .car-info {
+    margin-top: 20px; } }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .vehicle-wrapper {
+    grid-template-columns: 1fr 1fr; }
+    .vehicle-wrapper .grid-box-title {
+      grid-column: 2;
+      grid-row: 1/2; }
+    .vehicle-wrapper .grid-box-carousel {
+      grid-column: 1;
+      grid-row: 1/3; }
+    .vehicle-wrapper .grid-box-car-info {
+      grid-column: 2;
+      grid-row: 2/3; }
+  .car-info {
+    margin-top: 0px; } }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .vehicle-wrapper {
+    grid-template-columns: 1fr 1fr 2fr 1fr; }
+    .vehicle-wrapper .grid-box-title {
+      grid-column: 3;
+      grid-row: 1/2; }
+    .vehicle-wrapper .grid-box-carousel {
+      grid-column: 2;
+      grid-row: 1/3; }
+    .vehicle-wrapper .grid-box-car-info {
+      grid-column: 3;
+      grid-row: 2/3; } }

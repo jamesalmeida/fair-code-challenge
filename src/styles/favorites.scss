@@ -1,0 +1,24 @@
+.favorites-heart {
+  width: 50px;
+  height: 50px;
+  background: url('../assets/heart.png') no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+
+  &.is-active {
+    transition-duration: 1s;
+    background-position: -1400px 0;
+  }
+}
+
+.vehicle-index-wrapper-grid {
+  .favorites-heart-stage {
+    position: absolute;
+    bottom: -27px;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+}

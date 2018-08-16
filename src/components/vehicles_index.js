@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchVehicles } from '../actions';
+import { centsToDollars } from '../utils/utility_functions';
 
 class VehiclesIndex extends Component {
 
@@ -15,15 +16,17 @@ class VehiclesIndex extends Component {
       console.log('Inside renderVehicleList =')
       console.log(vehicle);
 
-      function centsToDollars(cents) {
-        var dollars = cents / 100;
-        return (
-          dollars.toLocaleString("en-US", {style:"currency", currency:"USD"})
-        );
-      }
+      $(function() {
+        $(".favorites-heart").on("click", function() {
+          $(this).toggleClass("is-active");
+        });
+      });
 
       return (
         <div className="card p-3 col-sm card-inverse" key={vehicle.id}>
+          <div className="favorites-heart-stage">
+            <div className="favorites-heart"></div>
+          </div>
           <Link to={`/vehicles/${vehicle.id}`}>
             <img className="vehicle-index img card-img-top" alt="Card image" src={ vehicle.exterior_color_info.fair_colored_image}></img>
             <div className="card-img-overlay">
@@ -56,12 +59,13 @@ class VehiclesIndex extends Component {
     const { vehicles } = this.props;
 
     if (!vehicles) {
-      return <div>Loading...</div>;
+      console.log('no vehicles in this.props');
+      return <div className="loading-div">Loading...</div>;
     }
-    
+
     return (
       <div>
-        <div className="vehicle-index-wrapper">
+        <div className="vehicle-index-wrapper-grid">
           { this.renderVehicleList() }
         </div>
         <div className="page-selector">
